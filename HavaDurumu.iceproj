@@ -1,0 +1,4031 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>9a45a089-4bee-4304-a1bd-4d26e6d31ca2</ProjectGuid>
+    <ProjectTypeGuids>{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}</ProjectTypeGuids>
+    <AppIdentifier>com.telerik.HavaDurumu</AppIdentifier>
+    <ProjectName>HavaDurumu</ProjectName>
+    <IsRunnable>true</IsRunnable>
+    <FrameworkVersion>3.0.0</FrameworkVersion>
+    <AndroidPermissions>android.permission.CAMERA;android.permission.VIBRATE;android.permission.ACCESS_COARSE_LOCATION;android.permission.ACCESS_FINE_LOCATION;android.permission.ACCESS_LOCATION_EXTRA_COMMANDS;android.permission.READ_PHONE_STATE;android.permission.INTERNET;android.permission.RECEIVE_SMS;android.permission.RECORD_AUDIO;android.permission.MODIFY_AUDIO_SETTINGS;android.permission.READ_CONTACTS;android.permission.WRITE_CONTACTS;android.permission.WRITE_EXTERNAL_STORAGE;android.permission.ACCESS_NETWORK_STATE;android.permission.ACCOUNT_MANAGER;android.permission.GET_ACCOUNTS;android.permission.MANAGE_ACCOUNTS;android.permission.BROADCAST_STICKY</AndroidPermissions>
+    <CorePlugins>org.apache.cordova.battery-status;org.apache.cordova.camera;org.apache.cordova.media-capture;org.apache.cordova.console;org.apache.cordova.contacts;org.apache.cordova.device;org.apache.cordova.device-motion;org.apache.cordova.file;org.apache.cordova.file-transfer;org.apache.cordova.geolocation;org.apache.cordova.globalization;org.apache.cordova.inappbrowser;org.apache.cordova.AudioHandler;org.apache.cordova.network-information;org.apache.cordova.dialogs;org.apache.cordova.splashscreen;org.apache.cordova.vibration</CorePlugins>
+    <DeviceOrientations>Portrait</DeviceOrientations>
+    <iOSStatusBarStyle>Default</iOSStatusBarStyle>
+    <AndroidHardwareAcceleration>false</AndroidHardwareAcceleration>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <BundleVersion>1.0</BundleVersion>
+    <ProjectHome />
+    <AndroidVersionCode>1</AndroidVersionCode>
+    <DisplayName />
+    <Author />
+    <Description>HavaDurumu</Description>
+    <iOSDeviceFamily>1;2</iOSDeviceFamily>
+    <iOSBackgroundMode>location</iOSBackgroundMode>
+    <WP8SupportedResolutions>ID_RESOLUTION_WVGA;ID_RESOLUTION_WXGA;ID_RESOLUTION_HD720P</WP8SupportedResolutions>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="App_Resources\Android\AndroidManifest.xml" />
+    <Content Include="App_Resources\Android\xml\config.xml">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="App_Resources\iOS\config.xml">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="App_Resources\iOS\Info.plist">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="App_Resources\WP8\ApplicationIcon.png" />
+    <Content Include="App_Resources\WP8\SplashScreenImage.jpg" />
+    <Content Include="App_Resources\WP8\Tiles\Iconic\110x110.png" />
+    <Content Include="App_Resources\WP8\Tiles\Iconic\202x202.png" />
+    <Content Include="Background\acik.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Background\az_bulutlu.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\cok_bulutlu.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\default.jpg" />
+    <Content Include="Background\gokgurultulu.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\gunesli.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\karli.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\parcali_bulutlu.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Background\puslu.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\ruzgarli.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\saganak.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\sicak.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\sisli.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\soguk.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Background\yagmurlu.jpg">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="bin\Debug\Android\HavaDurumu.apk">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="cordova.ios.js">
+      <Platform>iOS</Platform>
+      <TargetName>cordova.js</TargetName>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="cordova.android.js">
+      <Platform>Android</Platform>
+      <TargetName>cordova.js</TargetName>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="cordova.WP8.js" />
+    <Content Include="debug.log">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\alt_background.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\ayarlar.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\background.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\compass.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\dalgayuksekligi.png" />
+    <Content Include="diger\denizlerderuzgar.png" />
+    <Content Include="diger\denizsuyusicakliklari.png" />
+    <Content Include="diger\icon_denizler.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\icon_merkezler.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\menu1.png" />
+    <Content Include="diger\uyari.png" />
+    <Content Include="diger\karkalinliklari.png" />
+    <Content Include="diger\menu.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\icon_haritalar.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\icon_ayarlar.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\icon_sondurumlar.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\radar.png" />
+    <Content Include="diger\set1.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\set3.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\sondurum.png" />
+    <Content Include="diger\ust_background.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\icon_uyarilar.png">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="diger\uydu.png" />
+    <Content Include="diger\wave.png" />
+    <Content Include="IMAGES\Iconset\-7777.png" />
+    <Content Include="IMAGES\Iconset\A.png" />
+    <Content Include="IMAGES\Iconset\AB.png" />
+    <Content Include="IMAGES\Iconset\CB.png" />
+    <Content Include="IMAGES\Iconset\DMN.png" />
+    <Content Include="IMAGES\Iconset\DY.png" />
+    <Content Include="IMAGES\Iconset\GSY.png" />
+    <Content Include="IMAGES\Iconset\HKY.png" />
+    <Content Include="IMAGES\Iconset\HSY.png" />
+    <Content Include="IMAGES\Iconset\HY.png" />
+    <Content Include="IMAGES\Iconset\K.png" />
+    <Content Include="IMAGES\Iconset\KF.png" />
+    <Content Include="IMAGES\Iconset\KKY.png" />
+    <Content Include="IMAGES\Iconset\KSY.png" />
+    <Content Include="IMAGES\Iconset\KY.png" />
+    <Content Include="IMAGES\Iconset\MSY.png" />
+    <Content Include="IMAGES\Iconset\PB.png" />
+    <Content Include="IMAGES\Iconset\PUS.png" />
+    <Content Include="IMAGES\Iconset\R.png" />
+    <Content Include="IMAGES\Iconset\SCK.png" />
+    <Content Include="IMAGES\Iconset\SGK.png" />
+    <Content Include="IMAGES\Iconset\SIS.png" />
+    <Content Include="IMAGES\Iconset\SY.png" />
+    <Content Include="IMAGES\Iconset\Y.png" />
+    <Content Include="IMAGES\Iconset\YKY.png" />
+    <Content Include="IMAGES\Other\2.jpg" />
+    <Content Include="IMAGES\Other\airport.jpg" />
+    <Content Include="IMAGES\Other\back_air.jpg" />
+    <Content Include="IMAGES\Other\basinc_air.png" />
+    <Content Include="IMAGES\Other\compass.png" />
+    <Content Include="IMAGES\Other\delete.png" />
+    <Content Include="IMAGES\Other\gorus_air.png" />
+    <Content Include="IMAGES\Other\havaalani.jpg" />
+    <Content Include="IMAGES\Other\havaalani.png" />
+    <Content Include="IMAGES\Other\icon_pages.png" />
+    <Content Include="IMAGES\Other\icon_havaalani.png" />
+    <Content Include="IMAGES\Other\arka_plan.png" />
+    <Content Include="IMAGES\Other\ayar.png" />
+    <Content Include="IMAGES\Other\nem_air.png" />
+    <Content Include="IMAGES\Other\ruzgar_air.png" />
+    <Content Include="IMAGES\Other\ruzgar_air2.png" />
+    <Content Include="IMAGES\Other\sicaklik_air.png" />
+    <Content Include="IMAGES\Other\az_bulutlu.jpg" />
+    <Content Include="IMAGES\Other\background.png" />
+    <Content Include="IMAGES\Other\basinc_picture.png" />
+    <Content Include="IMAGES\Other\cok_bulutlu.jpg" />
+    <Content Include="IMAGES\Other\dalgayuksekligi.png" />
+    <Content Include="IMAGES\Other\default.jpg" />
+    <Content Include="IMAGES\Other\denizlerderuzgar.png" />
+    <Content Include="IMAGES\Other\denizsuyusicakliklari.png" />
+    <Content Include="IMAGES\Other\geri.png" />
+    <Content Include="IMAGES\Other\gokgurultulu.jpg" />
+    <Content Include="IMAGES\Other\gunesli.jpg" />
+    <Content Include="IMAGES\Other\haritalar.png" />
+    <Content Include="IMAGES\Other\header_back.png" />
+    <Content Include="IMAGES\Other\icon_ayarlar.png" />
+    <Content Include="IMAGES\Other\icon_basinc.png" />
+    <Content Include="IMAGES\Other\icon_denizler.png" />
+    <Content Include="IMAGES\Other\icon_haritalar.png" />
+    <Content Include="IMAGES\Other\icon_merkezekle.png" />
+    <Content Include="IMAGES\Other\icon_merkezler.png" />
+    <Content Include="IMAGES\Other\icon_nem.png" />
+    <Content Include="IMAGES\Other\icon_ruzgar.png" />
+    <Content Include="IMAGES\Other\icon_sondurumlar.png" />
+    <Content Include="IMAGES\Other\icon_uyarilar.png" />
+    <Content Include="IMAGES\Other\icon_yagis.png" />
+    <Content Include="IMAGES\Other\karkalinliklari.png" />
+    <Content Include="IMAGES\Other\karli.jpg" />
+    <Content Include="IMAGES\Other\menu_background.png" />
+    <Content Include="IMAGES\Other\menu_baslik.png" />
+    <Content Include="IMAGES\Other\merkez_background.png" />
+    <Content Include="IMAGES\Other\merkez_ekle.png" />
+    <Content Include="IMAGES\Other\ok.png" />
+    <Content Include="IMAGES\Other\panel_background.png" />
+    <Content Include="IMAGES\Other\merkez_background2.png" />
+    <Content Include="IMAGES\Other\merkez_background_alt.png" />
+    <Content Include="IMAGES\Other\nem_picture.png" />
+    <Content Include="IMAGES\Other\puslu.jpg" />
+    <Content Include="IMAGES\Other\radar.png" />
+    <Content Include="IMAGES\Other\radar_picture.png" />
+    <Content Include="IMAGES\Other\ruzgarli.jpg" />
+    <Content Include="IMAGES\Other\saganak.jpg" />
+    <Content Include="IMAGES\Other\sicak.jpg" />
+    <Content Include="IMAGES\Other\sisli.jpg" />
+    <Content Include="IMAGES\Other\soguk.jpg" />
+    <Content Include="IMAGES\Other\sondurum.png" />
+    <Content Include="IMAGES\Other\tahmin_background.png" />
+    <Content Include="IMAGES\Other\tahmin_picture.png" />
+    <Content Include="IMAGES\Other\uyari.png" />
+    <Content Include="IMAGES\Other\uydu.png" />
+    <Content Include="IMAGES\Other\uydu_picture.png" />
+    <Content Include="IMAGES\Other\wave.png" />
+    <Content Include="IMAGES\Other\yagis_picture.png" />
+    <Content Include="IMAGES\Other\yagmurlu.jpg" />
+    <Content Include="IMAGES\Other\yenile.png" />
+    <Content Include="IMAGES\Prec\yagis0.png" />
+    <Content Include="IMAGES\Prec\yagis1.png" />
+    <Content Include="IMAGES\Prec\yagis2.png" />
+    <Content Include="IMAGES\Prec\yagis3.png" />
+    <Content Include="lib\addswipe.js" />
+    <Content Include="lib\jquery.mobile-1.4.0.min.js" />
+    <Content Include="lib\jquery-1.7.1.min.js" />
+    <Content Include="lib\jqdialog.js" />
+    <Content Include="lib\jqdialog.min.js" />
+    <Content Include="lib\jquery.min.js" />
+    <Content Include="lib\jquery.mobile-1.2.0.min.css" />
+    <Content Include="lib\jquery.mobile-1.2.0.min.js" />
+    <Content Include="lib\jquery.mobile-1.4.1.css" />
+    <Content Include="lib\jquery.mobile-1.4.1.js" />
+    <Content Include="lib\jquery.mobile-1.4.1.min.css" />
+    <Content Include="lib\jquery.mobile-1.4.1.min.js" />
+    <Content Include="lib\phonegap-1.2.0.js" />
+    <Content Include="lib\jquery.mobile-1.4.0.min.css" />
+    <Content Include="lib\jquery.mobile-1.4.0-rc.js" />
+    <Content Include="lib\Temp.txt" />
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.android.css" />
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.blackberry.css" />
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.mobile.css" />
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.windowsphone.css" />
+    <Content Include="Wind\0.png" />
+    <Content Include="Wind\10.png" />
+    <Content Include="Wind\100.png" />
+    <Content Include="Wind\110.png" />
+    <Content Include="Wind\120.png" />
+    <Content Include="Wind\130.png" />
+    <Content Include="Wind\140.png" />
+    <Content Include="Wind\150.png" />
+    <Content Include="Wind\160.png" />
+    <Content Include="Wind\170.png" />
+    <Content Include="Wind\180.png" />
+    <Content Include="Wind\190.png" />
+    <Content Include="Wind\20.png" />
+    <Content Include="Wind\200.png" />
+    <Content Include="Wind\210.png" />
+    <Content Include="Wind\220.png" />
+    <Content Include="Wind\230.png" />
+    <Content Include="Wind\240.png" />
+    <Content Include="Wind\250.png" />
+    <Content Include="Wind\260.png" />
+    <Content Include="Wind\270.png" />
+    <Content Include="Wind\280.png" />
+    <Content Include="Wind\290.png" />
+    <Content Include="Wind\30.png" />
+    <Content Include="Wind\300.png" />
+    <Content Include="Wind\310.png" />
+    <Content Include="Wind\320.png" />
+    <Content Include="Wind\330.png" />
+    <Content Include="Wind\340.png" />
+    <Content Include="Wind\350.png" />
+    <Content Include="Wind\360.png" />
+    <Content Include="Wind\40.png" />
+    <Content Include="Wind\50.png" />
+    <Content Include="Wind\60.png" />
+    <Content Include="Wind\70.png" />
+    <Content Include="Wind\80.png" />
+    <Content Include="Wind\90.png" />
+    <Content Include="Wind\null.png" />
+    <Content Include="index.html">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="Mobile.sln">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="obj\Debug\HavaDurumu-TM.zip">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="obj\Debug\HavaDurumu.zip">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\A.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\AB.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\CB.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\DMN.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\DY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\GSY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\HKY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\HSY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\HY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\K.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\KF.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\KKY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\KSY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\KY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\MSY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\-7777.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\PB.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\PUS.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\R.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\SCK.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\SGK.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\SIS.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\SY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\Y.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\iconset\Set4\YKY.png">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\js\ayarlar.js">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\js\sondurum.js">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\buttongroup.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\checkbox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\checkboxandknockoutjs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\dropdownbutton.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\linkbutton.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\radiobutton.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\repeatbutton.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\switchbutton.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\togglebutton.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\autosize.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\disabledcalendar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\displayweekends.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\firstdayofweek.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\hideothermonthdays.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\localization.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\rangeselection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\restrictdaterange.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\showweekoftheyear.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\specialdates.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_100percent_stacked_area_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_100percent_stacked_column_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_100percent_stacked_line_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_areaspline_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_area_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_axis_position.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_bar_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_bind_to_xml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_bubbleSeries.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_color_bands.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_column_range.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_column_range_logarithmic_axis.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_column_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_column_series_1.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_combination_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_crosshairs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_custom_range.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_custom_style.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_dash_style.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_donut_labels.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_donut_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_export_jpeg.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_flip_axis.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_grey_scale.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_line_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_logarithmic_axis.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_logarithmic_axis_base10.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_logarithmic_axis_baseline.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_logarithmic_axis_percentage_stacked.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_logarithmic_axis_stacked.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_negative_bar_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_negative_values.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_pie_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_pie_series_custom_style.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_pie_series_legend.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_scatterXY.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_splinearea_range_logarithmic_axis.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_spline_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_stacked_area_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_stacked_column_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_stacked_line_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_step_line_series.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_textrotation.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_chart_tooltips_formatting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\javascript_line_series_symbol_type.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxchart\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcolorpicker\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcolorpicker\settings.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\alignment.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\animation.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\bindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\bindingtoremotedata.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\bindingtoxml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\categories.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\checkboxes.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\multiselect.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\remotesearch.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\rendering.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\settings.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdataadapter\bindingtocsv.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdataadapter\bindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdataadapter\bindingtojsonp.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdataadapter\bindingtotsv.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdataadapter\bindingtoxml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdataadapter\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdataadapter\formatting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\alignment.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\animation.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\dateandtime.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\disableddatetimeinput.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\formatdate.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\knockoutjs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\localization.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\rangeselection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\restrictdaterange.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\timeinput.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdocking\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdocking\export-layout.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdocking\jquery-docking-events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdocking\jquery-docking-import-layout.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdocking\jquery-docking-settings.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdocking\jquery-docking-vertical.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdocking\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdockpanel\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdragdrop\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdragdrop\dragdrop-events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\alignment.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\animation.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\autoopen.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\bindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\bindingtoremotedata.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\bindingtotsv.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\bindingtoxml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\categories.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\checkboxes.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\cookies.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\dropdownlistapi.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\loadfromselect.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\rendering.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\textwithicons.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxexpander\autosize.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxexpander\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxexpander\jqxexpanderxmldata.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxexpander\loadondemand.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxexpander\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxexpander\toggleondoubleclick.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgauge\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgauge\gauge-clock.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgauge\gauge-value.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgauge\linear-gauge-defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgauge\linear-gauge-settings.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgauge\settings.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\aggregates.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\aggregatesrenderer.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\alignment.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\autoresizecolumns.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\autorowheight.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\autosize.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\bindingtoarray.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\bindingtocsv.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\bindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\bindingtojsonp.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\bindingtojsonstring.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\bindingtojsonusingphp.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\bindingtotsv.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\bindingtoxml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\cellcustomediting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\cellediting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\celleditmodes.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\cellsselection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\checkboxcolumn.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\checkboxselection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\columnshierarchy.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\columnsresizing.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\columntooltips.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\contextmenu.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\createremoveupdatedata.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\customaggregates.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\customcolumn.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\customeditcolumn.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\customfiltering.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\customizededitors.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\custompager.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\customrowcelledit.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\customrowsselection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\customsorting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\dataexport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\deferredscrolling.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\deferredscrollinglargedata.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\disableeditingofrows.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\dragdrop.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\dragdropgridrecordtoform.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\dragdropmultiplerecords.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\dropdowngrid.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\editrowsrendering.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\filterconditions.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\filtering.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\filterrow.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\filterrowwithcustomitems.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\fittowindow.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\foreignkeycolumn.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\fulllocalization.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\generatedata.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\gridcellclass.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\gridkeyvaluecolumn.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\gridkeyvaluescolumnwitharray.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\gridmobile.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\grouping.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\groupingpaging.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\groupsrenderer.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\handlekeyboard.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\hideshowcolumns.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\imagecolumn.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\initialpage.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\jsarray.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\knockoutjs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\largedataset.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\loadfromtable.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\localization.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\masterdetails.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\nestedgrids.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\paging.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\percentagewidthcolumns.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\pinnedcolumns.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\popupediting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\refreshdata.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\reordercolumns.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\rowdetails.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\rowselection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\saveloadstate.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\sorting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\spreadsheet.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\statusbar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\toolbar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\virtualdata.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\virtualscrolling.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxinput\bindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxinput\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxinput\inputgroup.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxinput\multipleitems.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxinput\remoteautocomplete.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxinput\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\calendar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\chart.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\checkbox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\combobox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\computedcolumn.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\datetimeinput.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\dialog.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\docking.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\dropdownlist.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\dropdownlistwithdataadapter.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\gauge.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\grid.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\griddataadapter.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\gridwithdropdownlist.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\gridwithjson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\gridwithpaging.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\input.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\listbox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\listboxwithdataadapter.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\listboxwithjson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\maskedinput.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\menu.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\mvvm.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\numberinput.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\progressbar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\radiobutton.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\scrollbar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\slider.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\tree.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\autosize.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\categories.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\checkboxes.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\dragdrop.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\dragdroponelistbox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\jqxlistboxxmldata.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\knockoutjs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\listboxbindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\listboxbindingtoxml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\listboxlabelandvalue.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\listboxmobile.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\loadfromselect.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\loadfromxml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\multipleextendedselection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\multipleselection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\remotesearch.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\rendering.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\textwithicons.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistmenu\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistmenu\nestedlistviews.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxlistmenu\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmaskedinput\basic.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmaskedinput\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmaskedinput\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmaskedinput\knockoutjs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmaskedinput\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\centeritems.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\columns.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\contextmenu.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\images.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\localsource.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\menubindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\menubindingxml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\menumobile.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\opendirection.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\verticalmenu.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\autosize.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\disablednavigationbar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\multipleexpanded.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\navigation.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\toggle.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnumberinput\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnumberinput\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnumberinput\inputmode.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnumberinput\knockoutjs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnumberinput\numberinputapi.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnumberinput\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxnumberinput\validation.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxpanel\autosize.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxpanel\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxpanel\dockpanel.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxpanel\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxpasswordinput\customstrengthrule.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxpasswordinput\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxpasswordinput\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxpasswordinput\showstrengthcustom.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxprogressbar\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxprogressbar\layout.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxprogressbar\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxrating\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxrating\index.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxresponse\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxscrollbar\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxscrollbar\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxscrollview\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxslider\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxslider\jquery-range-slider.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxslider\jquery-slider-events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxslider\jquery-vertical-slider.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxslider\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxslider\layout.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxslider\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\ajaxloading.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\data\cnn.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\data\geek.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\data\sciencedaily.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\horizontal-splitter-collapsible-second-panel.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\horizontal-splitter.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\integration-with-jqxgrid.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\integration-with-jqxtabs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\jquery-splitter-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\jquery-splitter-events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\jquery-splitter-fit-to-window.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\jquery-splitter-four-columns.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\jquery-splitter-minimum-size.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\jquery-splitter-three-columns.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\jquery-splitter-three-pane-fit-to-window.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\jquery-splitter-three-pane.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\layout-container.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\navigation.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\nested-side-splitters.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\nested-splitters.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\pages\ajax1.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\pages\ajax2.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\pages\ajax3.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\simple-jqxtabs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\splitter-with-size-in-percentages.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\tabs-with-splitter.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\vertical-and-horizontal-nested-splitters.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\vertical-splitter-collapsible-second-panel.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\vertical-splitter.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\ajaxloading.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\closebuttons.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\collapsible.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\cookies.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\integration.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\pages\ajax1.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\pages\ajax2.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\pages\ajax3.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\reorder.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\scrolling.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\settings.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\tabswithimages.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\wizard.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtooltip\closeonclick.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtooltip\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtooltip\positions.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtouch\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtreemap\autocolors.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtreemap\bindwithdataadapter.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtreemap\customcolors.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtreemap\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtreemap\rangecolors.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtreemap\treemapbindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\ajax.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\ajax1.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\ajax2.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\ajaxloading.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\ajaxroot.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\autosize.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\checkboxes.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\dragdrop.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\dropdowntree.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\navigation.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\settings.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\treebindingtojson.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\treebindingxml.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\treemobile.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxtree\treepopup.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxvalidator\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxvalidator\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxvalidator\validation-label.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxwindow\defaultfunctionality.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxwindow\jquery-window-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxwindow\jquery-window-events.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxwindow\keyboardsupport.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxwindow\multiple-windows.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\jqxwindow\rtl.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\billing.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\billing_form.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\cascadingcombobox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\cascadingcombobox_data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\chart.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\chartdata.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\checkedlistbox.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\checkedlistbox_form.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\combobox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\comboboxdata.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\combobox_and_grid.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\combobox_and_grid_employees.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\combobox_and_grid_orders.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\dropdownlist.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\dropdownlistdata.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\grid.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\grid_data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\list.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\listbox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\listboxdata.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\login.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\login_form.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\message.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\message_form.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\registration.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\registration_form.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\serverfiltering.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\serverfiltering_data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\serverfiltering_paging_and_sorting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\serverfiltering_paging_and_sorting_data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\serverpaging.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\serverpaging_data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\serversorting.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\serversorting_data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\tree.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\php\treeview.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\beverages.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\categories.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\customers.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\customers.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\debt_top10_2010.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\desktop_browsers_share_dec2011.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\education_top10_2011.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\employees.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\feed.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\gdp_dept_2010.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\gdp_top10_2010.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\homeprices.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\lifeexpectancy_top10_2011.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\mobile_browsers_share_dec2011.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\nasdaq_vs_sp500.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\nflx_vs_sp500.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\oiluse_top10_2011.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\orderdetails.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\orderdetailsextended.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\orders.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\products.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\TSLA_stockprice.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\weather.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\weather_geneva.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\website_analytics.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\demos\sampledata\xmldata.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxbuttongroup\jqxbuttongroup-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxbutton\jqxbutton-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxcalendar\jqxcalendar-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxchart\jqxchart-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxcheckbox\jqxcheckbox-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxcolorpicker\jqxcolorpicker-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxcombobox\jqxcombobox-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxdataadapter\jqxdataadapter-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxdatetimeinput\jqxdatetimeinput-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxdocking\jqxdocking-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxdockpanel\jqxdockpanel-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxdragdrop\jqxdragdrop-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxdropdownbutton\jqxdropdownbutton-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxdropdownlist\jqxdropdownlist-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxexpander\jqxexpander-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxgauge\jqxgauge-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxgrid\jqxgrid-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxinput\jqxinput-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxknockout\jqxknockout-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxlineargauge\jqxlineargauge-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxlistbox\jqxlistbox-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxlistmenu\jqxlistmenu-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxmaskedinput\jqxmaskedinput-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxmenu\jqxmenu-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxnavigationbar\jqxnavigationbar-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxnumberinput\jqxnumberinput-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxpanel\jqxpanel-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxpasswordinput\jqxpasswordinput-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxpopup\jqxpopup-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxprogressbar\jqxprogressbar-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxradiobutton\jqxradiobutton-api..htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxrating\jqxrating-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxresponse\jqxresponse-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxscrollbar\jqxscrollbar-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxscrollview\jqxscrollview-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxslider\jqxslider-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxsplitter\jqxsplitter-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxswitchbutton\jqxswitchbutton-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxtabs\jqxtabs-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxtooltip\jqxtooltip-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxtouch\jqxtouch-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxtreemap\jqxtreemap-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxtree\jqxtree-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxvalidator\jqxvalidator-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\documentation\jqxwindow\jqxwindow-api.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\EULA.pdf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\add.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\andrew.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\anne.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\avatar.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\bigdaddy.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\A Knight of the Word.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Angel Fire East.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\At the Mountains of Madness.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Carrie.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Deathstalker Destiny.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Deathstalker Honor.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Deathstalker Rebellion.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Deathstalker War.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Deathstalker.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Harry Potter and the Chamber of Secrets.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Harry Potter and the Deathly Hallows.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Harry Potter and the Goblet of Fire.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Harry Potter and the Half-Blood Prince.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Harry Potter and the Order of the Phoenix.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Harry Potter and the Philosopher%27s Stone.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Harry Potter and the Prisoner of Azkaban.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\It.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Night Shift.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Running with the Demon.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Call of Cthulhu.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Dark Half.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Elfstones of Shannara.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Hobbit.JPG">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Lord of the Rings.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Silmarillion.JPG">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Sword of Shannara.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Time Machine.JPG">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The War of the Worlds.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\The Wishsong of Shannara.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\books\Thumbs.db" />
+    <Content Include="src\jqwidgets-ver3.0.2\images\building2_big.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\building2_small.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\building3_big.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\building3_small.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\building_big.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\building_small.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\calendarIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\catalogicon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\chart_background.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\close.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\contactsIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\endgame.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\favorites.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\ferrari.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\folder.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\folderIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\folderOpen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\galaxys4.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\Harry_Potter_7_Part_1.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\Harry_Potter_7_Part_2.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\help.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\icon-right.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\imageNature1.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\imageNature2.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\imageNature3.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\imageNature4.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\imageNature5.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\Inception.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\ipad.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\ipadbackground.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\iphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\jaguar.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\janet.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\knockout.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\kungfupanda.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-1.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-10.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-11.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-12.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-2.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-3.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-4.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-5.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-6.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-7.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-8.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\l-9.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\lamborgini.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\laura.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\LayoutTypes.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\leo.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\loader.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\local.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\mailIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\margaret.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\mercedes.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\michael.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\movie.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\nancy.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\nav1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\nav2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\nav3.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\news_ie6.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\next.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\notesIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\pieicon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\play.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\previous.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\priest.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\recycle.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\refresh.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\rhino.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\robert.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\search.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\search_lg.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\settings.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\shopping_cart.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\slider-demo-content-background.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\slider-demo-header-background.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\smarthphone.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\Star_Trek.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\Star_Wars_Episode_III.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\steven.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\stop.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\sun-icon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\2-sided-dodgers-bankrupt-t-shirt-ash.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\black-retro-rock-band-guitar-controller.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\bright-green-gettin-lucky-in-kentucky.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\brown-loading-bar-computer-geek.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\cool-story-bro.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\fear-the-beard.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\honey-badger-don-t-care.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\misfits-sf-giants-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\scott-pilgrim-red-rock-band.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\t-shirts\Thumbs.db" />
+    <Content Include="src\jqwidgets-ver3.0.2\images\tablet.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\tasksIcon.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\tennis.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\theplane.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\The_Amazng_Spider_Man.jpeg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\The_Avengers.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\The_Dark_Knight_Rises.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\Thor.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\Thumbs.db" />
+    <Content Include="src\jqwidgets-ver3.0.2\images\twilight.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\unknown.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\images\unstoppable.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\index.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.cs-CZ.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.de-DE.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.en-CA.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.en-US.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.fr-FR.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.he-IL.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.hr-HR.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.hu-HU.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.it-IT.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.ja-JP.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.lt.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.ru-RU.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.culture.sa-IN.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\globalize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqx-all.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxbuttongroup.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxbuttons.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxcalendar.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxchart.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxcheckbox.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxcolorpicker.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxcombobox.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxcore.js">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxdata.export.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxdata.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxdatetimeinput.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxdocking.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxdockpanel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxdragdrop.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxdropdownbutton.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxdropdownlist.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxexpander.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgauge.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.aggregates.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.columnsreorder.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.columnsresize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.edit.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.export.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.filter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.grouping.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.pager.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.selection.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.sort.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxgrid.storage.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxinput.js">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxknockout.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxlistbox.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxlistmenu.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxmaskedinput.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxmenu.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxnavigationbar.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxnumberinput.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxpanel.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxpasswordinput.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxprogressbar.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxradiobutton.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxrating.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxresponse.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxscrollbar.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxscrollview.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxslider.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxsplitter.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxswitchbutton.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxtabs.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxtooltip.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxtouch.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxtree.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxtreemap.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxvalidator.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\jqxwindow.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\backgroundTop.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\backImage.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_blackhover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_blackhover_horizontal.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_blackpressed.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_blackpressed_horizontal.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_black_horizontal.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_blueenergy.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_darkblue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_darkbluehover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\bg_darkbluepressed.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\blackbackground.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\black_gradient.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\check_black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\check_disabled.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\check_indeterminate_black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\check_indeterminate_disabled.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\check_indeterminate_white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\check_white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\close.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\close_white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\colorpicker\bar-hue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\colorpicker\bar-saturation.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\colorpicker\map-hue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\colorpicker\map-saturation-overlay.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\colorpicker\map-saturation.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\colorpicker\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\crosshair-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\crosshair.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_flat_30_cccccc_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_flat_50_5c5c5c_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_glass_20_555555_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_glass_40_0078a3_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_glass_40_ffc73d_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_gloss-wave_25_333333_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_highlight-soft_80_eeeeee_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_inset-soft_25_000000_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-bg_inset-soft_30_f58400_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-icons_222222_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-icons_4b8e0b_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-icons_a83300_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-icons_cccccc_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\ui-icons_ffffff_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkred_gradient.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\drag.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\dragcancel.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\filter.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-down-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-down.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-left-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-left.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-right-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-right.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-showpassword.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-up-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\icon-up.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_diagonals-small_0_aaaaaa_40x40.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_diagonals-thick_15_444444_40x40.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_diagonals-thick_95_ffdc2e_40x40.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_glass_55_fbf5d0_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_highlight-hard_30_285c00_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_highlight-soft_33_3a8104_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_highlight-soft_50_4eb305_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_highlight-soft_60_4ca20b_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-bg_inset-soft_10_285c00_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-icons_4eb305_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-icons_72b42d_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-icons_cd0a0a_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\ui-icons_ffffff_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_diagonals-thick_20_666666_40x40.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_flat_10_000000_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_glass_100_f6f6f6_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_glass_100_fdf5ce_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_glass_65_ffffff_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-icons_222222_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-icons_228ef1_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-icons_ef8c08_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-icons_ffd27a_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\ui-icons_ffffff_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\loader.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\menubutton.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\metro-icon-down-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\metro-icon-down.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\metro-icon-left-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\metro-icon-left.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\metro-icon-right-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\metro-icon-right.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\metro-icon-up-white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\metro-icon-up.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\multi-arrow.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\office-icon-down.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\office-icon-left.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\office-icon-right.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\office-icon-up.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_flat_0_aaaaaa_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_flat_0_eeeeee_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_flat_55_c0402a_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_flat_55_eeeeee_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_glass_100_f8f8f8_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_glass_35_dddddd_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_glass_60_eeeeee_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_inset-hard_75_999999_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-bg_inset-soft_50_c9c9c9_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-icons_3383bb_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-icons_454545_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-icons_70b2e1_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-icons_999999_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\ui-icons_fbc856_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\pointer.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\rangebar_classic.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\rangebar_darkblue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\rangebar_shinyblack.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\rangebar_summer.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-bg_flat_0_aaaaaa_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-bg_flat_55_fbec88_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-bg_glass_75_d0e5f5_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-bg_glass_85_dfeffc_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-bg_glass_95_fef1ec_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-bg_gloss-wave_55_5c9ccc_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-bg_inset-hard_100_f5f8f9_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-bg_inset-hard_100_fcfdfd_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-icons_217bc0_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-icons_2e83ff_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-icons_469bdd_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-icons_6da8d5_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-icons_cd0a0a_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-icons_d8e7f3_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\ui-icons_f9bd01_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\red_arrow_down.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\red_arrow_up.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\red_gradient.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\roundbg_check_black.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\roundbg_check_disabled.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\roundbg_check_indeterminate.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\roundbg_check_white.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\roundbg_classic_hover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\roundbg_classic_normal.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\roundbg_disabled.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-bg_flat_0_aaaaaa_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-bg_flat_75_ffffff_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-bg_glass_55_fbf9ee_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-bg_glass_65_ffffff_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-bg_glass_75_dadada_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-bg_glass_75_e6e6e6_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-bg_glass_95_fef1ec_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-icons_222222_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-icons_2e83ff_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-icons_454545_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-icons_888888_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\ui-icons_cd0a0a_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sortasc.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sortascbutton.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sortdesc.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sortdescbutton.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sortremove.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\star.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_flat_55_999999_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_flat_75_aaaaaa_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_glass_45_0078ae_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_glass_55_f8da4e_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_glass_75_79c9ec_1x400.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_gloss-wave_45_e14f1c_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_gloss-wave_50_6eac2c_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_gloss-wave_75_2191c0_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-bg_inset-hard_100_fcfdfd_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-icons_0078ae_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-icons_056b93_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-icons_d8e7f3_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-icons_e0fdff_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-icons_f5e175_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-icons_f7a50d_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\ui-icons_fcd113_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\star_disabled.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\star_hover.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_diagonals-medium_20_d34d17_40x40.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_flat_30_cccccc_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_flat_50_5c5c5c_40x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_gloss-wave_45_817865_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_gloss-wave_60_fece2f_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_gloss-wave_70_ffdd57_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_gloss-wave_90_fff9e5_500x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_highlight-soft_100_feeebd_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-bg_inset-soft_30_ffffff_1x100.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-icons_3d3d3d_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-icons_bd7b00_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-icons_d19405_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-icons_eb990f_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-icons_ed9f26_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-icons_fadc7a_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\ui-icons_ffe180_256x240.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\tick.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\track_classic.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\track_darkblue.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\track_shinyblack.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\track_summer.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.arctic.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.base.css">
+      <SubType>Content</SubType>
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.black.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.bootstrap.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.classic.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.darkblue.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.energyblue.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.fresh.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.highcontrast.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.metro.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.metrodark.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.office.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.orange.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.shinyblack.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.summer.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.ui-darkness.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.ui-le-frog.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.ui-lightness.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.ui-overcast.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.ui-redmond.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.ui-smoothness.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.ui-start.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.ui-sunny.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\jqx.web.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\button.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\buttongroup.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\calendar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\grid.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\listbox.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\listmenu.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\menu.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\navigationbar.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\scrollview.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\simulator.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\slider.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\splitter.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\switchbutton.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\tabs.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\touch.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\mobiledemos\tree.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_chart_to_mysql_database\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_chart_to_mysql_database\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_chart_to_mysql_database\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_combobox_to_mysql_database\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_combobox_to_mysql_database\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_combobox_to_mysql_database\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_dropdownlist_to_mysql_database\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_dropdownlist_to_mysql_database\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_dropdownlist_to_mysql_database\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_grid_to_mysql_database\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_grid_to_mysql_database\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_grid_to_mysql_database\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_grid_to_mysql_database_virtual_scrolling\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_grid_to_mysql_database_virtual_scrolling\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_grid_to_mysql_database_virtual_scrolling\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_input_to_mysql_database\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_input_to_mysql_database\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_input_to_mysql_database\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_listbox_to_mysql_database\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_listbox_to_mysql_database\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\bind_listbox_to_mysql_database\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\grid_master_details\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\grid_master_details\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\grid_master_details\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\Northwind.MySQL5.sql">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_crud\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_crud\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_crud\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing_and_paging\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing_and_paging\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing_and_paging\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing_with_popup\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing_with_popup\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing_with_popup\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_paging\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_paging\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_paging\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_sorting_and_paging\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_sorting_and_paging\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_sorting_and_paging\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_virtualscrolling\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_virtualscrolling\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_virtualscrolling\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_paging\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_paging\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_paging\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_sorting\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_sorting\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_sorting\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_sorting_and_paging\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_sorting_and_paging\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_sorting_and_paging\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid__with_nested_grids\connect.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid__with_nested_grids\data.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid__with_nested_grids\index.php">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\ReadMe.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\ReleaseNotes.txt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\format.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\gettheme.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\jquery-1.10.2.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\jquery-1.10.2.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\jquery-2.0.3.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\jquery-2.0.3.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\json2.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\knockout-2.2.1.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\knockout-mapping-2.0.0.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\scripts\qunit-git.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\styles\jqx.apireference.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\styles\qunit-git.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\styles\site.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxbutton\jqxbutton-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxcalendar\jqxcalendar-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxcheckinputs\jqxcheckinputs-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxcombobox\jqxcombobox-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxdatetimeinput\jqxdatetimeinput-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxdocking\jqxdocking-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxdockpanel\jqxdockpanel-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxdropdownlist\jqxdropdownlist-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxexpander\jqxexpander-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxgrid\jqxgrid-filtertests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxgrid\jqxgrid-groupingtests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxgrid\jqxgrid-pagingtests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxgrid\jqxgrid-selectiontests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxgrid\jqxgrid-sortingtests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxgrid\jqxgrid-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxlistbox\jqxlistbox-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxmaskedinput\jqxmaskedinput-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxmenu\jqxmenu-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxnavigationbar\jqxnavigationbar-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxnumberinput\jqxnumberinput-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxpanel\jqxpanel-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxprogressbar\jqxprogressbar-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxscrollbar\jqxscrollbar-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxslider\jqxslider-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxtabs\jqxtabs-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxtree\jqxtree-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxvalidator\jqxvalidation-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="src\jqwidgets-ver3.0.2\tests\jqxwindow\jqwindow-Tests.htm">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="lib\jquery-1.6.4.js">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="lib\jquery.mobile-1.1.0.js">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\css\images\ajax-loader.png" />
+    <Content Include="src\css\images\icon-search-black.png" />
+    <Content Include="src\css\images\icons-18-black.png" />
+    <Content Include="src\css\images\icons-18-white.png" />
+    <Content Include="src\css\images\icons-36-black.png" />
+    <Content Include="src\css\images\icons-36-white.png" />
+    <Content Include="src\css\jquery.mobile.structure-1.1.0.css">
+      <Publish>True</Publish>
+    </Content>
+    <Content Include="src\css\jquery.mobile.theme-1.1.0.css">
+      <Publish>True</Publish>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Resources\" />
+    <Folder Include="App_Resources\Android\" />
+    <Folder Include="App_Resources\Android\xml\" />
+    <Folder Include="App_Resources\iOS\" />
+    <Folder Include="App_Resources\WP8\" />
+    <Folder Include="App_Resources\WP8\Tiles\" />
+    <Folder Include="App_Resources\WP8\Tiles\Iconic\" />
+    <Folder Include="Background\" />
+    <Folder Include="bin\" />
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Debug\Android\" />
+    <Folder Include="diger\" />
+    <Folder Include="IMAGES\" />
+    <Folder Include="IMAGES\Iconset\" />
+    <Folder Include="IMAGES\Other\" />
+    <Folder Include="IMAGES\Prec\" />
+    <Folder Include="IMAGES\RuzgarGulu\" />
+    <Folder Include="lib\" />
+    <Folder Include="obj\" />
+    <Folder Include="obj\Debug\" />
+    <Folder Include="Plugins\" />
+    <Folder Include="src\" />
+    <Folder Include="src\css\" />
+    <Folder Include="src\css\images\" />
+    <Folder Include="src\iconset\" />
+    <Folder Include="src\iconset\Set4\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxbutton\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxcalendar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxchart\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxcolorpicker\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxcombobox\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxdataadapter\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxdatetimeinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxdocking\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxdockpanel\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxdragdrop\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxdropdownlist\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxexpander\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxgauge\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxgrid\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxknockout\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxlistbox\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxlistmenu\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxmaskedinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxmenu\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxnavigationbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxnumberinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxpanel\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxpasswordinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxprogressbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxrating\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxresponse\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxscrollbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxscrollview\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxslider\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\data\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxsplitter\pages\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxtabs\pages\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxtooltip\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxtouch\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxtreemap\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxtree\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxvalidator\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\jqxwindow\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\php\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\demos\sampledata\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxbuttongroup\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxbutton\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxcalendar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxchart\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxcheckbox\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxcolorpicker\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxcombobox\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxdataadapter\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxdatetimeinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxdocking\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxdockpanel\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxdragdrop\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxdropdownbutton\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxdropdownlist\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxexpander\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxgauge\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxgrid\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxknockout\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxlineargauge\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxlistbox\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxlistmenu\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxmaskedinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxmenu\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxnavigationbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxnumberinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxpanel\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxpasswordinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxpopup\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxprogressbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxradiobutton\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxrating\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxresponse\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxscrollbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxscrollview\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxslider\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxsplitter\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxswitchbutton\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxtabs\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxtooltip\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxtouch\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxtreemap\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxtree\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxvalidator\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\documentation\jqxwindow\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\images\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\images\books\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\images\t-shirts\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\globalization\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\colorpicker\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\darkness\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\le-frog\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\lightness\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\overcast\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\redmond\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\smoothness\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\start\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\jqwidgets\styles\images\sunny\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\mobiledemos\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\bind_chart_to_mysql_database\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\bind_combobox_to_mysql_database\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\bind_dropdownlist_to_mysql_database\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\bind_grid_to_mysql_database\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\bind_grid_to_mysql_database_virtual_scrolling\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\bind_input_to_mysql_database\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\bind_listbox_to_mysql_database\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\grid_master_details\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_crud\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing_and_paging\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_editing_with_popup\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_paging\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_sorting_and_paging\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_filtering_and_virtualscrolling\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_paging\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_sorting\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid_sorting_and_paging\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\phpdemos\server_side_grid__with_nested_grids\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\scripts\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\styles\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxbutton\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxcalendar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxcheckinputs\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxcombobox\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxdatetimeinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxdocking\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxdockpanel\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxdropdownlist\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxexpander\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxgrid\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxlistbox\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxmaskedinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxmenu\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxnavigationbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxnumberinput\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxpanel\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxprogressbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxscrollbar\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxslider\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxtabs\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxtree\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxvalidator\" />
+    <Folder Include="src\jqwidgets-ver3.0.2\tests\jqxwindow\" />
+    <Folder Include="src\js\" />
+    <Folder Include="Wind\" />
+  </ItemGroup>
+  <Import Project="$(IceniumTargets)Build.targets" />
+  <!--
+	TODO: Uncomment this code if you need to customize the build process.
+	<Target Name="BeforeBuild">
+		<Message Text="TODO: Implement BeforeBuild" Importance="high" />
+	</Target>
+
+	<Target Name="AfterBuild">
+		<Message Text="TODO: Implement AfterBuild" Importance="high" />
+	</Target>
+	-->
+</Project>

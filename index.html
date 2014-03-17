@@ -1,0 +1,1270 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>MGM</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="src/css/jquery.mobile.structure-1.1.0.css" type="text/css" rel="stylesheet">
+    <link href="src/css/jquery.mobile.theme-1.1.0.css" type="text/css" rel="stylesheet">
+
+    <link href="src/jqwidgets-ver3.0.2/jqwidgets/styles/jqx.base.css" type="text/css" rel="stylesheet" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            text-align: center;
+        }
+
+        #wrap {
+            position: absolute;
+            margin: 0px auto;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        #content {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-color: black;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .liste {
+            float: left;
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+
+
+    <link type="text/css" rel="stylesheet" href="lib/jquery.mobile-1.4.1.min.css">
+    <script type="text/javascript" src="src/jqwidgets-ver3.0.2/scripts/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.mobile-1.4.1.min.js"></script>
+
+
+   <script type="text/javascript" charset="utf-8" src="lib/phonegap-1.2.0.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/jqdialog.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/jqdialog.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib/jquery.min.js"></script>
+
+   <!-- <script type="text/javascript" charset="utf-8" src="lib/jquery.mobile-1.4.0-rc.js"></script>-->
+    
+   
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    
+     
+
+    <script type="text/javascript" src="src/jqwidgets-ver3.0.2/jqwidgets/jqxcore.js"></script>
+    <script type="text/javascript" src="src/jqwidgets-ver3.0.2/jqwidgets/jqxinput.js"></script>
+    <script type="text/javascript" src="src/jqwidgets-ver3.0.2/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="src/jqwidgets-ver3.0.2/jqwidgets/jqxbuttons.js"></script>
+    <script type="text/javascript" src="src/jqwidgets-ver3.0.2/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="src/jqwidgets-ver3.0.2/jqwidgets/jqxlistbox.js"></script>
+    <script type="text/javascript" src="src/jqwidgets-ver3.0.2/jqwidgets/jqxcombobox.js"></script>
+    <script type="text/javascript" charset="utf-8" src="lib\addswipe.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src\js\ayarlar.js"></script>
+    <script type="text/javascript" charset="utf-8" src="src\js\sondurum.js"></script>
+   
+    <!--<script type="text/javascript" charset="utf-8" src="lib\jquery-1.7.1.min.js"></script>-->
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#content').addSwipe(function () {
+                //sola sürüklemede çalışıyor
+
+                if (Sayfa!=MERKEZLER.length) {
+                    Sayfa++;
+                   // $("#defaultpanel").panel("open", "");
+                }
+            }, function () {
+                //sağa sürüklemede çalışıyor
+                if (Sayfa == 0) {
+                    
+                    $("#defaultpanel").panel("open");
+              
+                    //aler('a');
+                }
+                else
+                    Sayfa--;
+
+            }, {
+                snapGrid: 1,
+                minDist: 80,
+            });
+
+        });
+
+
+   
+    </script>
+
+
+
+</head>
+
+<body>
+
+
+
+    <div id="wrap" data-role="page" style="width: 100vw; height: 100vh; background-color: black;">
+
+        <div id="content" data-role="content" >
+            <ul>
+                <li id="pageSonDurum0" class="liste" style="width: 100vw; height: 100vh; position: relative; background-image: url('Background/default.jpg'); background-attachment: scroll; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                    <!--SonDurum_Lokasyon-->
+
+                    <div id="headerSonDurum0" style="width: 98vw; height: 13vh; top: 1vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                        <a href="#defaultpanel">
+                            <div  style="width: 30vw; height: 10vh; top: 2vh; left: 1vw; position: absolute; float: left; text-align: left;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/icon_pages.png" />
+                            </div>
+                        </a>
+                        <a href="#pageMerkezEkle" data-transition="slideup">
+                            <div style="width: 30vw; height: 10vh; top: 2vh; left: 69vw; position: absolute; float: left; padding-left: 7vw;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/merkez_ekle.png" />
+                            </div>
+                        </a>
+                        <div id="Istasyon_Adi0" style="width: 71vw; height: 5vh; top: 1vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                        <div id="Merkez_Adi0" style="width: 71vw; height: 3vh; top: 5vh; left: 15vw; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">//</div>
+                        <div id="Saat0" style="width: 71vw; height: 4vh; top: 8vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh;">//://</div>
+                    </div>
+
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">                      
+                        <div id="iconSonDurum0" style="width: 47.5vw; height: 24vh;  position: absolute; float: left;">
+                            <img id="HadiseIcon0" style="width: inherit; height: inherit; padding-top:1vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                    </div>
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 3vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="Sicaklik0" style="width: 47.5vw; height: 25vh; position: absolute; float: left; font-size: 13vh; font-weight: bold; color: #ff6a00; text-align: center; line-height: 25vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 3vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="HadiseAdi0" style="width: 98vw; height: 5vh; position: absolute; float: left; font-size: 4vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="RuzgarYon0" style="width: 18vw; height: 11vh; padding-top: 5vh;" src="Wind/null.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Rüzgar</div>
+                        <div id="Ruzgar0" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #1c687d; text-align: center; line-height: 5vh;">//</div>
+                        <div id="RuzgarBirim0" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">km/sa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 6vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Humidity0" style="width: 32vw; height: 16vh; margin-left: -5vw; padding-top: 2vh;" src="IMAGES/Other/nem_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Nem</div>
+                        <div id="Nem0" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #0026ff; text-align: center; line-height: 5vh;">//</div>
+                        <div id="NemBirim0" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">%</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 12vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Pressure0" style="width: 18vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Other/basinc_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Basınç</div>
+                        <div id="Basinc0" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #424141; text-align: center; line-height: 5vh;">//</div>
+                        <div id="BasincBirim0" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">hPa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 17vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Prec0" style="width: 20vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Prec/yagis0.png" />
+                        <div style="width: 20vw; height: 5vh; top:0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Yağış</div>
+                        <div id="Yagis0" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #00ff90; text-align: center; line-height: 5vh;">//</div>
+                        <div id="YagisBirim0" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">mm</div>
+                    </div>
+
+                    <div style="width: 98vw; height: 5vh; top: 5vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi10" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun10" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun10" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun10" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun10" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 6vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi20" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun20" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun20" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun20" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun20" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun30" style="width: 98vw; height: 5vh; top: 7vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi30" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun30" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun30" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun30" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun30" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun40" style="width: 98vw; height: 5vh; top: 8vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi40" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun40" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun40" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun40" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun40" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun50" style="width: 98vw; height: 5vh; top: 9vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi50" style="width: 25vw; height: 4vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun50" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun50" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun50" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun50" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                </li>
+
+               <li id="M1" class="liste" style="width: 100vw; height: 100vh; position: relative; background-image: url('Background/default.jpg'); background-attachment: scroll; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                    <div id="headerSonDurum1" style="width: 98vw; height: 13vh; top: 1vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                        <a href="#defaultpanel">
+                            <div  style="width: 30vw; height: 10vh; top: 2vh; left: 1vw; position: absolute; float: left; text-align: left;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/icon_pages.png" />
+                            </div>
+                        </a>
+                        <a href="#pageMerkezEkle" data-transition="slideup">
+                            <div style="width: 30vw; height: 10vh; top: 2vh; left: 69vw; position: absolute; float: left; padding-left: 7vw;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/merkez_ekle.png" />
+                            </div>
+                        </a>
+                        <div id="Istasyon_Adi1" style="width: 71vw; height: 5vh; top: 1vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                        <div id="Merkez_Adi1" style="width: 71vw; height: 3vh; top: 5vh; left: 15vw; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">//</div>
+                        <div id="Saat1" style="width: 71vw; height: 4vh; top: 8vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh;">//://</div>
+                    </div>
+
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">                      
+                        <div id="iconSonDurum1" style="width: 47.5vw; height: 24vh;  position: absolute; float: left;">
+                            <img id="HadiseIcon1" style="width: inherit; height: inherit; padding-top:1vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                    </div>
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 3vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="Sicaklik1" style="width: 47.5vw; height: 25vh; position: absolute; float: left; font-size: 13vh; font-weight: bold; color: #ff6a00; text-align: center; line-height: 25vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 3vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="HadiseAdi1" style="width: 98vw; height: 5vh; position: absolute; float: left; font-size: 4vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="RuzgarYon1" style="width: 18vw; height: 11vh; padding-top: 5vh;" src="Wind/null.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Rüzgar</div>
+                        <div id="Ruzgar1" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #1c687d; text-align: center; line-height: 5vh;">//</div>
+                        <div id="RuzgarBirim1" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">km/sa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 6vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Humidity1" style="width: 32vw; height: 16vh; margin-left: -5vw; padding-top: 2vh;" src="IMAGES/Other/nem_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Nem</div>
+                        <div id="Nem1" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #0026ff; text-align: center; line-height: 5vh;">//</div>
+                        <div id="NemBirim1" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">%</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 12vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Pressure1" style="width: 18vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Other/basinc_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Basınç</div>
+                        <div id="Basinc1" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #424141; text-align: center; line-height: 5vh;">//</div>
+                        <div id="BasincBirim1" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">hPa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 17vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Prec1" style="width: 20vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Prec/yagis0.png" />
+                        <div style="width: 20vw; height: 5vh; top:0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Yağış</div>
+                        <div id="Yagis1" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #00ff90; text-align: center; line-height: 5vh;">//</div>
+                        <div id="YagisBirim1" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">mm</div>
+                    </div>
+
+                    <div style="width: 98vw; height: 5vh; top: 5vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi11" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun11" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun11" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun11" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun11" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 6vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi21" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun21" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun21" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun21" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun21" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun31" style="width: 98vw; height: 5vh; top: 7vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi31" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun31" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun31" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun31" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun31" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun41" style="width: 98vw; height: 5vh; top: 8vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi41" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun41" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun41" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun41" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun41" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun51" style="width: 98vw; height: 5vh; top: 9vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi51" style="width: 25vw; height: 4vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun51" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun51" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun51" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun51" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                </li>
+                <li id="M2" class="liste" style="width: 100vw; height: 100vh; position: relative; background-image: url('Background/default.jpg'); background-attachment: scroll; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                    <div id="headerSonDurum2" style="width: 98vw; height: 13vh; top: 1vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                        <a href="#defaultpanel">
+                            <div  style="width: 30vw; height: 10vh; top: 2vh; left: 1vw; position: absolute; float: left; text-align: left;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/icon_pages.png" />
+                            </div>
+                        </a>
+                        <a href="#pageMerkezEkle" data-transition="slideup">
+                            <div style="width: 30vw; height: 10vh; top: 2vh; left: 69vw; position: absolute; float: left; padding-left: 7vw;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/merkez_ekle.png" />
+                            </div>
+                        </a>
+                        <div id="Istasyon_Adi2" style="width: 71vw; height: 5vh; top: 1vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                        <div id="Merkez_Adi2" style="width: 71vw; height: 3vh; top: 5vh; left: 15vw; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">//</div>
+                        <div id="Saat2" style="width: 71vw; height: 4vh; top: 8vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh;">//://</div>
+                    </div>
+
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">                      
+                        <div id="iconSonDurum2" style="width: 47.5vw; height: 24vh;  position: absolute; float: left;">
+                            <img id="HadiseIcon2" style="width: inherit; height: inherit; padding-top:1vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                    </div>
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 3vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="Sicaklik2" style="width: 47.5vw; height: 25vh; position: absolute; float: left; font-size: 13vh; font-weight: bold; color: #ff6a00; text-align: center; line-height: 25vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 3vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="HadiseAdi2" style="width: 98vw; height: 5vh; position: absolute; float: left; font-size: 4vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="RuzgarYon2" style="width: 18vw; height: 11vh; padding-top: 5vh;" src="Wind/null.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Rüzgar</div>
+                        <div id="Ruzgar2" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #1c687d; text-align: center; line-height: 5vh;">//</div>
+                        <div id="RuzgarBirim2" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">km/sa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 6vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Humidity2" style="width: 32vw; height: 16vh; margin-left: -5vw; padding-top: 2vh;" src="IMAGES/Other/nem_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Nem</div>
+                        <div id="Nem2" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #0026ff; text-align: center; line-height: 5vh;">//</div>
+                        <div id="NemBirim2" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">%</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 12vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Pressure2" style="width: 18vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Other/basinc_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Basınç</div>
+                        <div id="Basinc2" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #424141; text-align: center; line-height: 5vh;">//</div>
+                        <div id="BasincBirim2" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">hPa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 17vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Prec2" style="width: 20vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Prec/yagis0.png" />
+                        <div style="width: 20vw; height: 5vh; top:0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Yağış</div>
+                        <div id="Yagis2" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #00ff90; text-align: center; line-height: 5vh;">//</div>
+                        <div id="YagisBirim2" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">mm</div>
+                    </div>
+
+                    <div style="width: 98vw; height: 5vh; top: 5vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi12" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun12" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun12" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun12" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun12" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 6vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi22" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun22" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun22" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun22" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun22" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun32" style="width: 98vw; height: 5vh; top: 7vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi32" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun32" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun32" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun32" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun32" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun42" style="width: 98vw; height: 5vh; top: 8vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi42" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun42" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun42" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun42" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun42" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun52" style="width: 98vw; height: 5vh; top: 9vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi52" style="width: 25vw; height: 4vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun52" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun52" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun52" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun52" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                </li>
+                <li id="M3" class="liste" style="width: 100vw; height: 100vh; position: relative; background-image: url('Background/default.jpg'); background-attachment: scroll; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                    <div id="headerSonDurum3" style="width: 98vw; height: 13vh; top: 1vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                        <a href="#defaultpanel">
+                            <div  style="width: 30vw; height: 10vh; top: 2vh; left: 1vw; position: absolute; float: left; text-align: left;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/icon_pages.png" />
+                            </div>
+                        </a>
+                        <a href="#pageMerkezEkle" data-transition="slideup">
+                            <div style="width: 30vw; height: 10vh; top: 2vh; left: 69vw; position: absolute; float: left; padding-left: 7vw;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/merkez_ekle.png" />
+                            </div>
+                        </a>
+                        <div id="Istasyon_Adi3" style="width: 71vw; height: 5vh; top: 1vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                        <div id="Merkez_Adi3" style="width: 71vw; height: 3vh; top: 5vh; left: 15vw; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">//</div>
+                        <div id="Saat3" style="width: 71vw; height: 4vh; top: 8vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh;">//://</div>
+                    </div>
+
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">                      
+                        <div id="iconSonDurum3" style="width: 47.5vw; height: 24vh;  position: absolute; float: left;">
+                            <img id="HadiseIcon3" style="width: inherit; height: inherit; padding-top:1vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                    </div>
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 3vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="Sicaklik3" style="width: 47.5vw; height: 25vh; position: absolute; float: left; font-size: 13vh; font-weight: bold; color: #ff6a00; text-align: center; line-height: 25vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 3vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="HadiseAdi3" style="width: 98vw; height: 5vh; position: absolute; float: left; font-size: 4vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="RuzgarYon3" style="width: 18vw; height: 11vh; padding-top: 5vh;" src="Wind/null.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Rüzgar</div>
+                        <div id="Ruzgar3" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #1c687d; text-align: center; line-height: 5vh;">//</div>
+                        <div id="RuzgarBirim3" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">km/sa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 6vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Humidity3" style="width: 32vw; height: 16vh; margin-left: -5vw; padding-top: 2vh;" src="IMAGES/Other/nem_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Nem</div>
+                        <div id="Nem3" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #0026ff; text-align: center; line-height: 5vh;">//</div>
+                        <div id="NemBirim3" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">%</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 12vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Pressure3" style="width: 18vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Other/basinc_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Basınç</div>
+                        <div id="Basinc3" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #424141; text-align: center; line-height: 5vh;">//</div>
+                        <div id="BasincBirim3" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">hPa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 17vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Prec3" style="width: 20vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Prec/yagis0.png" />
+                        <div style="width: 20vw; height: 5vh; top:0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Yağış</div>
+                        <div id="Yagis3" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #00ff90; text-align: center; line-height: 5vh;">//</div>
+                        <div id="YagisBirim3" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">mm</div>
+                    </div>
+
+                    <div style="width: 98vw; height: 5vh; top: 5vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi13" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun13" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun13" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun13" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun13" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 6vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi23" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun23" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun23" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun23" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun23" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun33" style="width: 98vw; height: 5vh; top: 7vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi33" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun33" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun33" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun33" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun33" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun43" style="width: 98vw; height: 5vh; top: 8vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi43" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun43" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun43" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun43" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun43" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun53" style="width: 98vw; height: 5vh; top: 9vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi53" style="width: 25vw; height: 4vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun53" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun53" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun53" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun53" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                </li>
+                <li id="M4" class="liste" style="width: 100vw; height: 100vh; position: relative; background-image: url('Background/default.jpg'); background-attachment: scroll; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                    <div id="headerSonDurum4" style="width: 98vw; height: 13vh; top: 1vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                        <a href="#defaultpanel">
+                            <div  style="width: 30vw; height: 10vh; top: 2vh; left: 1vw; position: absolute; float: left; text-align: left;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/icon_pages.png" />
+                            </div>
+                        </a>
+                        <a href="#pageMerkezEkle" data-transition="slideup">
+                            <div style="width: 30vw; height: 10vh; top: 2vh; left: 69vw; position: absolute; float: left; padding-left: 7vw;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/merkez_ekle.png" />
+                            </div>
+                        </a>
+                        <div id="Istasyon_Adi4" style="width: 71vw; height: 5vh; top: 1vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                        <div id="Merkez_Adi4" style="width: 71vw; height: 3vh; top: 5vh; left: 15vw; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">//</div>
+                        <div id="Saat4" style="width: 71vw; height: 4vh; top: 8vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh;">//://</div>
+                    </div>
+
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">                      
+                        <div id="iconSonDurum4" style="width: 47.5vw; height: 24vh;  position: absolute; float: left;">
+                            <img id="HadiseIcon4" style="width: inherit; height: inherit; padding-top:1vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                    </div>
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 3vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="Sicaklik4" style="width: 47.5vw; height: 25vh; position: absolute; float: left; font-size: 13vh; font-weight: bold; color: #ff6a00; text-align: center; line-height: 25vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 3vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="HadiseAdi4" style="width: 98vw; height: 5vh; position: absolute; float: left; font-size: 4vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="RuzgarYon4" style="width: 18vw; height: 11vh; padding-top: 5vh;" src="Wind/null.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Rüzgar</div>
+                        <div id="Ruzgar4" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #1c687d; text-align: center; line-height: 5vh;">//</div>
+                        <div id="RuzgarBirim4" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">km/sa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 6vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Humidity4" style="width: 32vw; height: 16vh; margin-left: -5vw; padding-top: 2vh;" src="IMAGES/Other/nem_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Nem</div>
+                        <div id="Nem4" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #0026ff; text-align: center; line-height: 5vh;">//</div>
+                        <div id="NemBirim4" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">%</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 12vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Pressure4" style="width: 18vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Other/basinc_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Basınç</div>
+                        <div id="Basinc4" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #424141; text-align: center; line-height: 5vh;">//</div>
+                        <div id="BasincBirim4" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">hPa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 17vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Prec4" style="width: 20vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Prec/yagis0.png" />
+                        <div style="width: 20vw; height: 5vh; top:0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Yağış</div>
+                        <div id="Yagis4" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #00ff90; text-align: center; line-height: 5vh;">//</div>
+                        <div id="YagisBirim4" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">mm</div>
+                    </div>
+
+                    <div style="width: 98vw; height: 5vh; top: 5vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi14" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun14" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun14" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun14" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun14" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 6vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi24" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun24" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun24" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun24" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun24" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun34" style="width: 98vw; height: 5vh; top: 7vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi34" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun34" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun34" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun34" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun34" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun44" style="width: 98vw; height: 5vh; top: 8vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi44" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun44" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun44" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun44" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun44" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun54" style="width: 98vw; height: 5vh; top: 9vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi54" style="width: 25vw; height: 4vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun54" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun54" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun54" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun54" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                </li>
+                <li id="M5" class="liste" style="width: 100vw; height: 100vh; position: relative; background-image: url('Background/default.jpg'); background-attachment: scroll; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                    <div id="headerSonDurum5" style="width: 98vw; height: 13vh; top: 1vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                        <a href="#defaultpanel">
+                            <div  style="width: 30vw; height: 10vh; top: 2vh; left: 1vw; position: absolute; float: left; text-align: left;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/icon_pages.png" />
+                            </div>
+                        </a>
+                        <a href="#pageMerkezEkle" data-transition="slideup">
+                            <div style="width: 30vw; height: 10vh; top: 2vh; left: 69vw; position: absolute; float: left; padding-left: 7vw;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/merkez_ekle.png" />
+                            </div>
+                        </a>
+                        <div id="Istasyon_Adi5" style="width: 71vw; height: 5vh; top: 1vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                        <div id="Merkez_Adi5" style="width: 71vw; height: 3vh; top: 5vh; left: 15vw; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">//</div>
+                        <div id="Saat5" style="width: 71vw; height: 4vh; top: 8vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh;">//://</div>
+                    </div>
+
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">                      
+                        <div id="iconSonDurum5" style="width: 47.5vw; height: 24vh;  position: absolute; float: left;">
+                            <img id="HadiseIcon5" style="width: inherit; height: inherit; padding-top:1vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                    </div>
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 3vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="Sicaklik5" style="width: 47.5vw; height: 25vh; position: absolute; float: left; font-size: 13vh; font-weight: bold; color: #ff6a00; text-align: center; line-height: 25vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 3vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="HadiseAdi5" style="width: 98vw; height: 5vh; position: absolute; float: left; font-size: 4vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="RuzgarYon5" style="width: 18vw; height: 11vh; padding-top: 5vh;" src="Wind/null.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Rüzgar</div>
+                        <div id="Ruzgar5" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #1c687d; text-align: center; line-height: 5vh;">//</div>
+                        <div id="RuzgarBirim5" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">km/sa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 6vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Humidity5" style="width: 32vw; height: 16vh; margin-left: -5vw; padding-top: 2vh;" src="IMAGES/Other/nem_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Nem</div>
+                        <div id="Nem5" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #0026ff; text-align: center; line-height: 5vh;">//</div>
+                        <div id="NemBirim5" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">%</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 12vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Pressure5" style="width: 18vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Other/basinc_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Basınç</div>
+                        <div id="Basinc5" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #424141; text-align: center; line-height: 5vh;">//</div>
+                        <div id="BasincBirim5" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">hPa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 17vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Prec5" style="width: 20vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Prec/yagis0.png" />
+                        <div style="width: 20vw; height: 5vh; top:0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Yağış</div>
+                        <div id="Yagis5" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #00ff90; text-align: center; line-height: 5vh;">//</div>
+                        <div id="YagisBirim5" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">mm</div>
+                    </div>
+
+                    <div style="width: 98vw; height: 5vh; top: 5vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi15" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun15" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun15" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun15" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun15" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 6vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi25" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun25" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun25" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun25" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun25" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun35" style="width: 98vw; height: 5vh; top: 7vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi35" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun35" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun35" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun35" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun35" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun45" style="width: 98vw; height: 5vh; top: 8vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi45" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun45" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun45" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun45" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun45" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun55" style="width: 98vw; height: 5vh; top: 9vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi55" style="width: 25vw; height: 4vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun55" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun55" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun55" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun55" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                </li>
+                <li id="M6" class="liste" style="width: 100vw; height: 100vh; position: relative; background-image: url('Background/default.jpg'); background-attachment: scroll; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                    <div id="headerSonDurum6" style="width: 98vw; height: 13vh; top: 1vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                        <a href="#defaultpanel">
+                            <div  style="width: 30vw; height: 10vh; top: 2vh; left: 1vw; position: absolute; float: left; text-align: left;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/icon_pages.png" />
+                            </div>
+                        </a>
+                        <a href="#pageMerkezEkle" data-transition="slideup">
+                            <div style="width: 30vw; height: 10vh; top: 2vh; left: 69vw; position: absolute; float: left; padding-left: 7vw;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/merkez_ekle.png" />
+                            </div>
+                        </a>
+                        <div id="Istasyon_Adi6" style="width: 71vw; height: 5vh; top: 1vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                        <div id="Merkez_Adi6" style="width: 71vw; height: 3vh; top: 5vh; left: 15vw; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">//</div>
+                        <div id="Saat6" style="width: 71vw; height: 4vh; top: 8vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh;">//://</div>
+                    </div>
+
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">                      
+                        <div id="iconSonDurum6" style="width: 47.5vw; height: 24vh;  position: absolute; float: left;">
+                            <img id="HadiseIcon6" style="width: inherit; height: inherit; padding-top:1vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                    </div>
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 3vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="Sicaklik6" style="width: 47.5vw; height: 25vh; position: absolute; float: left; font-size: 13vh; font-weight: bold; color: #ff6a00; text-align: center; line-height: 25vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 3vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="HadiseAdi6" style="width: 98vw; height: 5vh; position: absolute; float: left; font-size: 4vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="RuzgarYon6" style="width: 18vw; height: 11vh; padding-top: 5vh;" src="Wind/null.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Rüzgar</div>
+                        <div id="Ruzgar6" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #1c687d; text-align: center; line-height: 5vh;">//</div>
+                        <div id="RuzgarBirim6" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">km/sa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 6vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Humidity6" style="width: 32vw; height: 16vh; margin-left: -5vw; padding-top: 2vh;" src="IMAGES/Other/nem_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Nem</div>
+                        <div id="Nem6" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #0026ff; text-align: center; line-height: 5vh;">//</div>
+                        <div id="NemBirim6" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">%</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 12vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Pressure6" style="width: 18vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Other/basinc_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Basınç</div>
+                        <div id="Basinc6" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #424141; text-align: center; line-height: 5vh;">//</div>
+                        <div id="BasincBirim6" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">hPa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 17vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Prec6" style="width: 20vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Prec/yagis0.png" />
+                        <div style="width: 20vw; height: 5vh; top:0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Yağış</div>
+                        <div id="Yagis6" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #00ff90; text-align: center; line-height: 5vh;">//</div>
+                        <div id="YagisBirim6" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">mm</div>
+                    </div>
+
+                    <div style="width: 98vw; height: 5vh; top: 5vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi16" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun16" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun16" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun16" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun16" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 6vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi26" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun26" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun26" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun26" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun26" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun36" style="width: 98vw; height: 5vh; top: 7vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi36" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun36" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun36" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun36" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun36" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun46" style="width: 98vw; height: 5vh; top: 8vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi46" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun46" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun46" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun46" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun46" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun56" style="width: 98vw; height: 5vh; top: 9vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi56" style="width: 25vw; height: 4vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun56" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun56" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun56" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun56" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                </li>
+                <li id="M7" class="liste" style="width: 100vw; height: 100vh; position: relative; background-image: url('Background/default.jpg'); background-attachment: scroll; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                    <div id="headerSonDurum7" style="width: 98vw; height: 13vh; top: 1vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+                        <a href="#defaultpanel">
+                            <div  style="width: 30vw; height: 10vh; top: 2vh; left: 1vw; position: absolute; float: left; text-align: left;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/icon_pages.png" />
+                            </div>
+                        </a>
+                        <a href="#pageMerkezEkle" data-transition="slideup">
+                            <div style="width: 30vw; height: 10vh; top: 2vh; left: 69vw; position: absolute; float: left; padding-left: 7vw;">
+                                <img style="width: 17vw; height: 9vh;" src="IMAGES/Other/merkez_ekle.png" />
+                            </div>
+                        </a>
+                        <div id="Istasyon_Adi7" style="width: 71vw; height: 5vh; top: 1vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                        <div id="Merkez_Adi7" style="width: 71vw; height: 3vh; top: 5vh; left: 15vw; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">//</div>
+                        <div id="Saat7" style="width: 71vw; height: 4vh; top: 8vh; left: 15vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh;">//://</div>
+                    </div>
+
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">                      
+                        <div id="iconSonDurum7" style="width: 47.5vw; height: 24vh;  position: absolute; float: left;">
+                            <img id="HadiseIcon7" style="width: inherit; height: inherit; padding-top:1vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                    </div>
+                    <div style="width: 47.5vw; height: 25vh; top: 2vh; left: 3vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="Sicaklik7" style="width: 47.5vw; height: 25vh; position: absolute; float: left; font-size: 13vh; font-weight: bold; color: #ff6a00; text-align: center; line-height: 25vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 3vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="HadiseAdi7" style="width: 98vw; height: 5vh; position: absolute; float: left; font-size: 4vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 1vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="RuzgarYon7" style="width: 18vw; height: 11vh; padding-top: 5vh;" src="Wind/null.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Rüzgar</div>
+                        <div id="Ruzgar7" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #1c687d; text-align: center; line-height: 5vh;">//</div>
+                        <div id="RuzgarBirim7" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">km/sa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 6vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Humidity7" style="width: 32vw; height: 16vh; margin-left: -5vw; padding-top: 2vh;" src="IMAGES/Other/nem_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Nem</div>
+                        <div id="Nem7" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #0026ff; text-align: center; line-height: 5vh;">//</div>
+                        <div id="NemBirim7" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">%</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 12vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Pressure7" style="width: 18vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Other/basinc_picture.png" />
+                        <div style="width: 20vw; height: 5vh; top: 0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Basınç</div>
+                        <div id="Basinc7" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #424141; text-align: center; line-height: 5vh;">//</div>
+                        <div id="BasincBirim7" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">hPa</div>
+                    </div>
+                    <div style="width: 20vw; height: 19vh; top: 4vh; left: 17vw; position: relative; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <img id="Prec7" style="width: 20vw; height: 9vh; margin-top: 6vh;" src="IMAGES/Prec/yagis0.png" />
+                        <div style="width: 20vw; height: 5vh; top:0; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 5vh;">Yağış</div>
+                        <div id="Yagis7" style="width: 20vw; height: 5vh; top: 8vh; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #00ff90; text-align: center; line-height: 5vh;">//</div>
+                        <div id="YagisBirim7" style="width: 20vw; height: 3vh; top: 16vh; position: absolute; float: left; font-size: 2vh; font-weight: bold; color: white; text-align: center; line-height: 3vh;">mm</div>
+                    </div>
+
+                    <div style="width: 98vw; height: 5vh; top: 5vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi17" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun17" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun17" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun17" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun17" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div style="width: 98vw; height: 5vh; top: 6vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi27" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun27" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun27" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun27" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun27" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun37" style="width: 98vw; height: 5vh; top: 7vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi37" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun37" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun37" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun37" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun37" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun47" style="width: 98vw; height: 5vh; top: 8vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi47" style="width: 25vw; height: 5vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun47" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun47" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun47" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun47" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                    <div id="TahminGun57" style="width: 98vw; height: 5vh; top: 9vh; left: 1vw; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                        <div id="GunAdi57" style="width: 25vw; height: 4vh; top: 0; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 5vh;">//</div>
+                        <div id="IconGun57" style="width: 10vw; height: 5vh; top: 0; left: 49vw; position: absolute; float: left;">
+                            <img id="Icon_Gun57" style="width: inherit; height: inherit; padding-top:0.5vh;" src="IMAGES/Iconset/-7777.png" />
+                        </div>
+                        <div id="Max_Gun57" style="width: 10vw; height: 5vh; top: 0; left: 73vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #c31e1e; text-align: right; line-height: 5vh;">//</div>
+                        <div id="Min_Gun57" style="width: 10vw; height: 5vh; top: 0; left: 87vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: #7cfbfb; text-align: right; line-height: 5vh;">//</div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+        <div data-role="panel" data-theme="b" id="defaultpanel" style="padding-left: 0; padding-top: 0;" data-position="left" data-display="push" >
+            <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+                <li data-icon="back"><a href="#" data-rel="close" style="text-align: center; font-size: 4vh;">Ayrıntılar</a></li>
+            </ul>
+            <div data-role="content" id="content_Ayrintilar" style="width: 75vw; height: 81vh; padding-top: 0; padding-left: 0;">
+                <ul data-role="listview" data-inset="true">
+
+                    <li><a href="#pageMerkezler" data-transition="slide" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 15vw;">
+                        <img src="IMAGES/Other/haritalar.png" style="top: 4vh;" class="ui-li-icon ui-corner-none">Merkezler</a></li>
+                    <li><a href="#pageUyarilar" data-transition="slide" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 15vw;">
+                        <img src="IMAGES/Other/icon_uyarilar.png" style="width: 12vw; height: 8vh; top: 4vh;" class="ui-li-icon">Uyarılar</a></li>
+                    <li><a href="#pageUyduGoruntuleri" data-transition="slide" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 15vw;">
+                        <img src="IMAGES/Other/uydu.png" style="width: 9vw; height: 4vh; top: 3vh;" class="ui-li-icon">Uydu</a></li>
+                    <li><a href="#pageRadarGoruntuleri" data-transition="slide" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 15vw;">
+                        <img src="IMAGES/Other/radar.png" style="width: 10vw; height: 6vh; top: 4vh;" class="ui-li-icon">Radar</a></li>
+                    <li><a href="#pageHavalimanlari" data-transition="slide" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 15vw;">
+                        <img src="IMAGES/Other/icon_havaalani.png" style="width: 9vw; height: 6vh; top: 4vh;" class="ui-li-icon">Havalimanları</a></li>
+                    <li><a href="#pageDenizler" data-transition="slide" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 15vw;">
+                        <img src="IMAGES/Other/icon_denizler.png" style="width: 9vw; height: 6vh; top: 4vh;" class="ui-li-icon">Denizler</a></li>
+                    <li><a href="#pageAyarlar" data-transition="slide" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 15vw;">
+                        <img src="IMAGES/Other/icon_ayarlar.png" style="width: 10vw; height: 7vh; top: 4vh;" class="ui-li-icon ui-corner-none">Ayarlar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageMerkezler" style="width: 100vw; height: 100vh; padding-left: 0; padding-top: 0;" data-position="right">
+
+        <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#wrap" data-transition="slide" style="text-align: center; font-size: 4vh;">Merkezler</a></li>
+        </ul>
+
+        <div id="SeciliMerkezler"></div>
+
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageMerkezEkle" style="width: 100vw; height: 100vh; padding-left: 0; padding-top: 0;" data-position="right">
+
+
+            <div style="top: 0; left:0; width: 88vw;float: left;">
+                <input type="text" id="input" />
+            </div>
+            <div id="custom-border-radius" style="float: left; top: 0; width: 10vw; height:35px; line-height:35px; padding-left:3px;">
+                <a href="#wrap" data-transition="slidedown" class="ui-btn ui-icon-back ui-btn-icon-notext ui-corner-all"></a>
+            </div>
+
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageUyarilar" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#" data-rel="back" style="text-align: center; font-size: 4vh;">Uyarılar</a></li>
+        </ul>
+        <div data-role="content" id="contentUyarilar" style="width: 90vw; height: 90vh;">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#Uyari1" id="Uyari1" data-transition="flip" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 15vw;">
+                    <img src="diger/uyari.png" alt="Uyarilar" style="width: 9vw; height: 6vh; top: 2vh;" class="ui-li-icon ui-corner-none">Yoğun Kar Yağışı</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageUyduGoruntuleri" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#" data-rel="back" style="text-align: center; font-size: 4vh;">Uydu</a></li>
+        </ul>
+
+        <div data-role="content" id="ContentUyduGoruntuleri" style="width: 84vw; height: 80vh; top: 12vh; left: 3vw; position: fixed; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080;">
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageRadarGoruntuleri" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#" data-rel="back" style="text-align: center; font-size: 4vh;">Radar</a></li>
+        </ul>
+
+        <div data-role="content" id="ContentRadarGoruntuleri" style="width: 84vw; height: 80vh; top: 12vh; left: 3vw; position: fixed; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080;">
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageHavalimanlari" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#" data-rel="back" style="text-align: center; font-size: 4vh;">Havalimanları</a></li>
+        </ul>
+        <div data-role="content" id="ContentHavalimanlari" style="top: 0; left: 0; width: 90vw; height: 83vh;">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#pageAkinci" data-transition="slide" id="AKINCI" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 12vw;">
+                    <img src="IMAGES/Other/icon_havaalani.png" alt="Havalimanlari" style="top: 4vh;" class="ui-li-icon ui-corner-none"></>Akıncı Havalimanı</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageDenizler" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#" data-rel="back" style="text-align: center; font-size: 4vh;">Denizler</a></li>
+        </ul>
+        <div data-role="content" id="contentDenizler" style="top: 0; left: 0; width: 90vw; height: 83vh;">
+            <ul data-role="listview" data-inset="true">
+                <li><a href="#pageDoguKaradeniz" data-transition="slide" id="DoguKaradeniz" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 12vw;">
+                    <img src="IMAGES/Other/icon_denizler.png" alt="Denizler" style="top: 3.5vh;" class="ui-li-icon ui-corner-none">Doğu Karadeniz</a></li>
+                <li><a href="#pageBatiKaradeniz" data-transition="slide" id="BatiKaradeniz" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 12vw;">
+                    <img src="IMAGES/Other/icon_denizler.png" alt="Denizler" style="top: 3.5vh;" class="ui-li-icon ui-corner-none">Batı Karadeniz</a></li>
+                <li><a href="#pageMarmara" data-transition="slide" id="Marmara" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 12vw;">
+                    <img src="IMAGES/Other/icon_denizler.png" alt="Denizler" style="top: 3.5vh;" class="ui-li-icon ui-corner-none">Marmara</a></li>
+                <li><a href="#pageKuzeyEge" data-transition="slide" id="KuzeyEge" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 12vw;">
+                    <img src="IMAGES/Other/icon_denizler.png" alt="Denizler" style="top: 3.5vh;" class="ui-li-icon ui-corner-none">Kuzey Ege</a></li>
+                <li><a href="#pageGuneyEge" data-transition="slide" id="GuneyEge" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 12vw;">
+                    <img src="IMAGES/Other/icon_denizler.png" alt="Denizler" style="top: 3.5vh;" class="ui-li-icon ui-corner-none">Güney Ege</a></li>
+                <li><a href="#pageBatiAkdeniz" data-transition="slide" id="BatiAkdeniz" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 12vw;">
+                    <img src="IMAGES/Other/icon_denizler.png" alt="Denizler" style="top: 3.5vh;" class="ui-li-icon ui-corner-none">Batı Akdeniz</a></li>
+                <li><a href="#pageDoguAkdeniz" data-transition="slide" id="DoguAkdeniz" style="height: 6vh; font-size: 6vw; line-height: 6vh; padding-left: 12vw;">
+                    <img src="IMAGES/Other/icon_denizler.png" alt="Denizler" style="top: 3.5vh;" class="ui-li-icon ui-corner-none">Doğu Akdeniz</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageAyarlar" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#" data-rel="back" style="text-align: center; font-size: 4vh;">Ayarlar</a></li>
+        </ul>
+        <div data-role="content" id="ContentAyarlar" style="top: 0; left: 0; width: 90vw; height: 83vh;">
+            <ul>
+                <li data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Sıcaklık:</legend>
+                        <input type="radio" name="radiob" id="A" />
+                        <label for="A">°C</label>
+                        <input type="radio" name="radiob" id="B" />
+                        <label for="B">°F</label>
+                        <input type="radio" name="radiob" id="C" />
+                        <label for="C">°K</label>
+                    </fieldset>
+                </li>
+                <li data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Rüzgar:</legend>
+                        <input type="radio" name="radioc" id="D" />
+                        <label for="D">km/sa</label>
+                        <input type="radio" name="radioc" id="E" />
+                        <label for="E">m/sec</label>
+                        <input type="radio" name="radioc" id="F" />
+                        <label for="F">knot</label>
+                    </fieldset>
+                </li>
+                <li data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-type="horizontal">
+                        <legend>Basınç:</legend>
+                        <input type="radio" name="radiod" id="J" />
+                        <label for="J">hPa</label>
+                        <input type="radio" name="radiod" id="K" />
+                        <label for="K">ATM</label>
+                        <input type="radio" name="radiod" id="L" />
+                        <label for="L">mmHg</label>
+                    </fieldset>
+                </li>
+                <li data-role="buton">    
+                    <a href="wrap" id="btnKaydet" data-role="button" data-theme="b" data-inline="true" onclick="btnAyarlar()">Kaydet</a>                                        
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageDoguKaradeniz" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding-left: 0; padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#pageDenizler" data-rel="back" style="text-align: center; font-size: 4vh;">Doğu Karadeniz</a></li>
+        </ul>
+        <div data-role="content" id="ContentDoguKaradeniz" style="width: 100vw; height: 88vh; top: 12vh; left: 0; position: fixed;">
+            <div style="width: 97vw; height: 4vh; top: 2vh; left: 3vw; padding-left: 1vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Tahmin Periyodu:</div>
+            <div id="Periyod_DK" style="width: 96vw; height: 5vh; top: 6vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 12vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Fırtına Beklentisi:</div>
+            <div id="Firtina_DK" style="width: 96vw; height: 10vh; top: 16vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 27vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Hava Durumu:</div>
+            <div id="Hava_DK" style="width: 96vw; height: 10vh; top: 31vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 42vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Rüzgar Yönü ve Hızı:</div>
+            <div id="Ruzgar_DK" style="width: 96vw; height: 10vh; top: 46vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 57vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Dalga Yüksekliği:</div>
+            <div id="Deniz_DK" style="width: 96vw; height: 10vh; top: 61vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 72vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Görüş Mesafesi:</div>
+            <div id="Gorus_DK" style="width: 96vw; height: 10vh; top: 76vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageBatiKaradeniz" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#pageDenizler" data-rel="back" style="text-align: center; font-size: 4vh;">Batı Karadeniz</a></li>
+        </ul>
+        <div data-role="content" id="ContentBatiKaradeniz" style="width: 100vw; height: 88vh; top: 12vh; left: 0; position: fixed;">
+            <div style="width: 97vw; height: 4vh; top: 2vh; left: 3vw; padding-left: 1vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Tahmin Periyodu:</div>
+            <div id="Periyod_BK" style="width: 96vw; height: 5vh; top: 6vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 12vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Fırtına Beklentisi:</div>
+            <div id="Firtina_BK" style="width: 96vw; height: 10vh; top: 16vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 27vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Hava Durumu:</div>
+            <div id="Hava_BK" style="width: 96vw; height: 10vh; top: 31vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 42vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Rüzgar Yönü ve Hızı:</div>
+            <div id="Ruzgar_BK" style="width: 96vw; height: 10vh; top: 46vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 57vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Dalga Yüksekliği:</div>
+            <div id="Deniz_BK" style="width: 96vw; height: 10vh; top: 61vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 72vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Görüş Mesafesi:</div>
+            <div id="Gorus_BK" style="width: 96vw; height: 10vh; top: 76vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageMarmara" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#pageDenizler" data-rel="back" style="text-align: center; font-size: 4vh;">Marmara</a></li>
+        </ul>
+        <div data-role="content" id="ContentMarmara" style="width: 100vw; height: 88vh; top: 12vh; left: 0; position: fixed;">
+            <div style="width: 97vw; height: 4vh; top: 2vh; left: 3vw; padding-left: 1vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Tahmin Periyodu:</div>
+            <div id="Periyod_M" style="width: 96vw; height: 5vh; top: 6vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 12vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Fırtına Beklentisi:</div>
+            <div id="Firtina_M" style="width: 96vw; height: 10vh; top: 16vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 27vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Hava Durumu:</div>
+            <div id="Hava_M" style="width: 96vw; height: 10vh; top: 31vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 42vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Rüzgar Yönü ve Hızı:</div>
+            <div id="Ruzgar_M" style="width: 96vw; height: 10vh; top: 46vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 57vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Dalga Yüksekliği:</div>
+            <div id="Deniz_M" style="width: 96vw; height: 10vh; top: 61vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 72vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Görüş Mesafesi:</div>
+            <div id="Gorus_M" style="width: 96vw; height: 10vh; top: 76vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageKuzeyEge" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#pageDenizler" data-rel="back" style="text-align: center; font-size: 4vh;">Kuzey Ege</a></li>
+        </ul>
+        <div data-role="content" id="ContentKuzeyEge" style="width: 100vw; height: 88vh; top: 12vh; left: 0; position: fixed;">
+            <div style="width: 97vw; height: 4vh; top: 2vh; left: 3vw; padding-left: 1vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Tahmin Periyodu:</div>
+            <div id="Periyod_KE" style="width: 96vw; height: 5vh; top: 6vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 12vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Fırtına Beklentisi:</div>
+            <div id="Firtina_KE" style="width: 96vw; height: 10vh; top: 16vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 27vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Hava Durumu:</div>
+            <div id="Hava_KE" style="width: 96vw; height: 10vh; top: 31vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 42vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Rüzgar Yönü ve Hızı:</div>
+            <div id="Ruzgar_KE" style="width: 96vw; height: 10vh; top: 46vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 57vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Dalga Yüksekliği:</div>
+            <div id="Deniz_KE" style="width: 96vw; height: 10vh; top: 61vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 72vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Görüş Mesafesi:</div>
+            <div id="Gorus_KE" style="width: 96vw; height: 10vh; top: 76vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageGuneyEge" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#pageDenizler" data-rel="back" style="text-align: center; font-size: 4vh;">Güney Ege</a></li>
+        </ul>
+        <div data-role="content" id="ContentGuneyEge" style="width: 100vw; height: 88vh; top: 12vh; left: 0; position: fixed;">
+            <div style="width: 97vw; height: 4vh; top: 2vh; left: 3vw; padding-left: 1vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Tahmin Periyodu:</div>
+            <div id="Periyod_GE" style="width: 96vw; height: 5vh; top: 6vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 12vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Fırtına Beklentisi:</div>
+            <div id="Firtina_GE" style="width: 96vw; height: 10vh; top: 16vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 27vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Hava Durumu:</div>
+            <div id="Hava_GE" style="width: 96vw; height: 10vh; top: 31vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 42vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Rüzgar Yönü ve Hızı:</div>
+            <div id="Ruzgar_GE" style="width: 96vw; height: 10vh; top: 46vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 57vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Dalga Yüksekliği:</div>
+            <div id="Deniz_GE" style="width: 96vw; height: 10vh; top: 61vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 72vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Görüş Mesafesi:</div>
+            <div id="Gorus_GE" style="width: 96vw; height: 10vh; top: 76vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageBatiAkdeniz" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#pageDenizler" data-rel="back" style="text-align: center; font-size: 4vh;">Batı Akdeniz</a></li>
+        </ul>
+        <div data-role="content" id="ContentBatiAkdeniz" style="width: 100vw; height: 88vh; top: 12vh; left: 0; position: fixed;">
+            <div style="width: 97vw; height: 4vh; top: 2vh; left: 3vw; padding-left: 1vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Tahmin Periyodu:</div>
+            <div id="Periyod_BA" style="width: 96vw; height: 5vh; top: 6vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 12vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Fırtına Beklentisi:</div>
+            <div id="Firtina_BA" style="width: 96vw; height: 10vh; top: 16vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 27vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Hava Durumu:</div>
+            <div id="Hava_BA" style="width: 96vw; height: 10vh; top: 31vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 42vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Rüzgar Yönü ve Hızı:</div>
+            <div id="Ruzgar_BA" style="width: 96vw; height: 10vh; top: 46vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 57vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Dalga Yüksekliği:</div>
+            <div id="Deniz_BA" style="width: 96vw; height: 10vh; top: 61vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 72vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Görüş Mesafesi:</div>
+            <div id="Gorus_BA" style="width: 96vw; height: 10vh; top: 76vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageDoguAkdeniz" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#pageDenizler" data-rel="back" style="text-align: center; font-size: 4vh;">Doğu Akdeniz</a></li>
+        </ul>
+        <div data-role="content" id="ContentDoguAkdeniz" style="width: 100vw; height: 88vh; top: 12vh; left: 0; position: fixed;">
+            <div style="width: 97vw; height: 4vh; top: 2vh; left: 3vw; padding-left: 1vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Tahmin Periyodu:</div>
+            <div id="Periyod_DA" style="width: 96vw; height: 5vh; top: 6vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 12vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Fırtına Beklentisi:</div>
+            <div id="Firtina_DA" style="width: 96vw; height: 10vh; top: 16vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 27vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Hava Durumu:</div>
+            <div id="Hava_DA" style="width: 96vw; height: 10vh; top: 31vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 42vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Rüzgar Yönü ve Hızı:</div>
+            <div id="Ruzgar_DA" style="width: 96vw; height: 10vh; top: 46vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 57vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Dalga Yüksekliği:</div>
+            <div id="Deniz_DA" style="width: 96vw; height: 10vh; top: 61vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+            <div style="width: 97vw; height: 4vh; top: 72vh; left: 3vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 4vh;">Görüş Mesafesi:</div>
+            <div id="Gorus_DA" style="width: 96vw; height: 10vh; top: 76vh; left: 2vw; padding-left: 1vw; position: absolute; float: left; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; font-size: 3vh; font-weight: bold; color: black; text-align: left; line-height: 5vh; background-color: #fff;"></div>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="b" id="pageAkinci" style="width: 100vw; height: 100vh; position: fixed;">
+        <ul data-role="listview" data-inset="true" style="padding: 0; margin: 0;">
+            <li data-icon="back"><a href="#pageHavalimanlari" data-rel="back" style="text-align: center; font-size: 4vh;">Akıncı</a></li>
+        </ul>
+        <div data-role="content" id="contentAkinci" style="width: 84vw; height: 80vh; top: 12vh; left: 3vw; position: fixed; border-radius: 10px 10px 10px 10px; -moz-border-radius: 10px 10px 10px 10px; -webkit-border-radius: 10px 10px 10px 10px; border: solid 1px #808080; background-image: url(IMAGES/Other/havaalani.jpg); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+
+            <div id="Akinci_Saat" style="width: 20vw; height: 4vh; top: 2vh; left: 37vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: center; line-height: 4vh; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">15:40</div>
+            <div style="width: 42vw; height: 24vh; top: 8vh; left: 25vw; position: absolute; float: left; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080;">
+                <img id="Akinci_Icon" style="width: inherit; height: inherit;" src="IMAGES/Iconset/AB.png" />
+            </div>
+            <div id="Akinci_Hadise" style="width: 84vw; height: 6vh; top: 34vh; left: 5vw; position: absolute; float: left; font-size: 3.5vh; font-weight: bold; color: white; text-align: center; line-height: 6vh; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">Az Bulutlu</div>
+            <div style="width: 84vw; height: 6vh; top: 38vh; left: 0; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                <div style="width: 6vw; height: 4vh; top: 1vh; left: 2vw; position: absolute; float: left;">
+                    <img style="width: inherit; height: inherit;" src="IMAGES/Other/sicaklik_air.png" />
+                </div>
+                <div style="width: 20vw; height: 6vh; left: 9vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">Sıcaklık</div>
+                <div style="width: 10vw; height: 6vh; left: 29vw; position: absolute; float: left; font-size: 2.5vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">(°C)</div>
+                <div id="Akinci_Sicaklik" style="width: 20vw; height: 6vh; top: 0; left: 62vw; position: absolute; float: left; font-size: 3.5vh; font-weight: bold; color: white; text-align: right; line-height: 6vh; color: #fff;">12</div>
+            </div>
+            <div style="width: 84vw; height: 6vh; top: 39vh; left: 0; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                <div style="width: 6vw; height: 4vh; top: 1vh; left: 2vw; position: absolute; float: left;">
+                    <img style="width: inherit; height: inherit;" src="IMAGES/Other/ruzgar_air.png" />
+                </div>
+                <div style="width: 40vw; height: 6vh; left: 9vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">Rüzgar Yönü</div>
+                <div style="width: 10vw; height: 6vh; left: 41vw; position: absolute; float: left; font-size: 2.5vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">(°)</div>
+                <div id="Akinci_RuzgarYon" style="width: 30vw; height: 6vh; left: 52vw; position: absolute; float: left; font-size: 3.5vh; font-weight: bold; color: white; text-align: right; line-height: 6vh; color:#fff;">330</div>
+            </div>
+            <div style="width: 84vw; height: 6vh; top: 40vh; left: 0; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                <div style="width: 6vw; height: 4vh; top: 1vh; left: 2vw; position: absolute; float: left;">
+                    <img style="width: inherit; height: inherit;" src="IMAGES/Other/ruzgar_air2.png" />
+                </div>
+                <div style="width: 40vw; height: 6vh; left: 9vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">Rüzgar Hızı</div>
+                 <div style="width: 10vw; height: 6vh; left: 37vw; position: absolute; float: left; font-size: 2.5vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">(km/sa)</div>
+                <div id="Akinci_RuzgarHiz" style="width: 30vw; height: 6vh; left: 52vw; position: absolute; float: left; font-size: 3.5vh; font-weight: bold; color: white; text-align: right; line-height: 6vh; color:#fff;">17</div>
+            </div>
+            <div style="width: 84vw; height: 6vh; top: 41vh; left: 0; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                <div style="width: 6vw; height: 4vh; top: 1vh; left: 2vw; position: absolute; float: left;">
+                    <img style="width: inherit; height: inherit;" src="IMAGES/Other/nem_air.png" />
+                </div>
+                <div style="width: 40vw; height: 6vh; left: 9vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">Nem</div>
+                 <div style="width: 10vw; height: 6vh; left: 21vw; position: absolute; float: left; font-size: 2.5vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">(%)</div>
+                <div id="Akinci_Nem" style="width: 30vw; height: 6vh; left: 52vw; position: absolute; float: left; font-size: 3.5vh; font-weight: bold; color: white; text-align: right; line-height: 6vh; color:#fff;">74</div>
+            </div>
+            <div style="width: 84vw; height: 6vh; top: 42vh; left: 0; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                <div style="width: 6vw; height: 4vh; top: 1vh; left: 2vw; position: absolute; float: left;">
+                    <img style="width: inherit; height: inherit;" src="IMAGES/Other/basinc_air.png" />
+                </div>
+                <div style="width: 40vw; height: 6vh; left: 9vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">Basınç</div>
+                 <div style="width: 10vw; height: 6vh; left: 26vw; position: absolute; float: left; font-size: 2.5vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">(hPa)</div>
+                <div id="Akinci_Basinc" style="width: 30vw; height: 6vh; left: 52vw; position: absolute; float: left; font-size: 3.5vh; font-weight: bold; color: white; text-align: right; line-height: 6vh; color:#fff;">1004</div>
+            </div>
+            <div style="width: 84vw; height: 6vh; top: 43vh; left: 0; position: relative; float: left; border-radius: 5px 5px 5px 5px; -moz-border-radius: 5px 5px 5px 5px; -webkit-border-radius: 5px 5px 5px 5px; border: solid 1px #808080; background-image: url('IMAGES/Other/panel_background.png'); background-attachment: fixed; background-repeat: no-repeat; background-size: 100vw 100vh;">
+                <div style="width: 6vw; height: 4vh; top: 1vh; left: 2vw; position: absolute; float: left;">
+                    <img style="width: inherit; height: inherit;" src="IMAGES/Other/gorus_air.png" />
+                </div>
+                <div style="width: 40vw; height: 6vh; left: 9vw; position: absolute; float: left; font-size: 3vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">Görüş Mesafesi</div>
+                 <div style="width: 10vw; height: 6vh; left: 47vw; position: absolute; float: left; font-size: 2.5vh; font-weight: bold; color: white; text-align: left; line-height: 6vh; color: #fff;">(km)</div>
+                <div id="Akinci_Gorus" style="width: 30vw; height: 6vh; left: 52vw; position: absolute; float: left; font-size: 3.5vh; font-weight: bold; color: white; text-align: right; line-height: 6vh; color:#fff;">10</div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+
